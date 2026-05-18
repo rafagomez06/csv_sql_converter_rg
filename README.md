@@ -1,16 +1,29 @@
-# React + Vite
+# Proyecto CSV a SQL 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Herramienta para convertir archivos `.csv` a scripts de inserción de SQL Server,
+facilitando la carga de datos para pruebas directamente en base de datos,
+sin necesidad de servidores ni dependencias externas.
 
-Currently, two official plugins are available:
+## ¿Cómo funciona?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. Ingresa el nombre de la tabla SQL destino.
+2. Sube tu archivo `.csv` (drag & drop o explorador de archivos).
+3. Genera el script la conversión ocurre completamente en el navegador.
+4. Descarga el archivo `.sql` e insértalo directo en tu base de datos.
 
-## React Compiler
+## Reglas de conversión
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Los **cabeceros** del CSV se mapean como columnas: `[columna1], [columna2], ...`
+- Valores **vacíos o nulos** se convierten en `NULL`
+- Valores **numéricos** (enteros y decimales) se insertan sin comillas
+- Valores de **texto** se envuelven en comillas simples con escape de `'` → `''`
+- Cada fila genera una sentencia `INSERT INTO` independiente
 
-## Expanding the ESLint configuration
+## Tecnologías
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** — UI y manejo de estado
+- **FileReader API** — lectura del CSV en el navegador (sin envío al servidor)
+- **CSS** — estilos con soporte de modo claro / oscuro
+
+## Hecho por:
+-  **@rafagomez06**
