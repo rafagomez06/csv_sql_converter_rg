@@ -1,0 +1,177 @@
+/*
+ * CsvToSql.css
+ * Estilos globales para la página CSV → SQL.
+ * Importar una sola vez en CsvToSqlPage.jsx
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+/* Reset solo para esta sección */
+.csv-sql-page *,
+.csv-sql-page *::before,
+.csv-sql-page *::after {
+  box-sizing: border-box;
+}
+
+/* Elimina los bordes negros del #root global */
+body:has(.csv-sql-page) {
+  margin: 0;
+}
+body:has(.csv-sql-page) #root {
+  width: 100%;
+  max-width: 100%;
+  border-inline: none;
+}
+
+/* ── Página ── */
+.csv-sql-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+  transition: background 0.3s;
+}
+
+/* ── Card ── */
+.csv-card {
+  width: 100%;
+  max-width: 560px;
+  border-radius: 20px;
+  padding: 40px 44px;
+  transition: background 0.3s, border 0.3s;
+}
+
+@media (max-width: 540px) {
+  .csv-card {
+    padding: 24px 16px;
+  }
+}
+
+/* ── Header ── */
+.csv-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  gap: 16px;
+}
+
+@media (max-width: 480px) {
+  .csv-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ── Input de nombre de tabla ── */
+.csv-table-input {
+  width: 100%;
+  padding: 11px 16px;
+  border-radius: 10px;
+  font-size: 14.5px;
+  font-family: 'DM Mono', monospace;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.csv-table-input:focus {
+  outline: none;
+}
+.csv-table-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Drop zone ── */
+.csv-dropzone {
+  border-radius: 14px;
+  padding: 32px 20px;
+  text-align: center;
+  transition: all 0.22s;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.csv-dropzone--has-file {
+  cursor: default;
+}
+.csv-dropzone:hover:not(.csv-dropzone--has-file) {
+  opacity: 0.9;
+}
+
+/* ── Toggle dark mode ── */
+.csv-toggle {
+  border-radius: 40px;
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  transition: opacity 0.2s;
+}
+.csv-toggle:hover {
+  opacity: 0.8;
+}
+
+/* ── Botón principal ── */
+.csv-btn-primary {
+  width: 100%;
+  border: none;
+  border-radius: 11px;
+  padding: 13px 0;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  letter-spacing: -0.01em;
+  transition: background 0.18s, transform 0.18s;
+}
+.csv-btn-primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+.csv-btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+.csv-btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Botón secundario ── */
+.csv-btn-secondary {
+  background: none;
+  border-radius: 10px;
+  padding: 11px 18px;
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.18s;
+}
+.csv-btn-secondary:hover {
+  opacity: 0.75;
+}
+
+/* ── Animaciones ── */
+@keyframes csv-spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes csv-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.csv-fade-in {
+  animation: csv-fade-in 0.35s ease forwards;
+}
+.csv-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2.5px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  animation: csv-spin 0.75s linear infinite;
+}
