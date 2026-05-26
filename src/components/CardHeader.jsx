@@ -5,7 +5,7 @@ const CardHeader = ({ dark, onToggle, colors }) => (
     {/* Título y descripción */}
     <div>
       <h1 style={{
-        margin: 0, fontSize: 26, fontWeight: 600,
+        margin: 0, fontSize: 26, fontWeight: 800,
         color: colors.text, lineHeight: 1.2, letterSpacing: "-0.02em",
       }}>
        Convertidor CSV <span style={{ color: colors.accent }}>a</span> SQL 

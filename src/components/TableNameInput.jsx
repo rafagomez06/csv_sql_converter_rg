@@ -1,9 +1,9 @@
 const TableNameInput = ({ value, onChange, error, disabled, colors }) => (
   <div style={{ marginBottom: 20 }}>
     <label style={{
-      display: "block", fontSize: 12.5, fontWeight: 600,
+      display: "block", fontSize: 12.5, fontWeight: 800,
       color: colors.textMuted, marginBottom: 8,
-      letterSpacing: "0.04em", textTransform: "uppercase",
+      letterSpacing: "0.04em", 
     }}>
       Nombre de la tabla SQL:
     </label>

@@ -4,7 +4,7 @@
  * Importar una sola vez en CsvToSqlPage.jsx
  */
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* Reset solo para esta sección */
 .csv-sql-page *,
@@ -16,6 +16,7 @@
 /* Elimina los bordes negros del #root global */
 body:has(.csv-sql-page) {
   margin: 0;
+  
 }
 body:has(.csv-sql-page) #root {
   width: 100%;
@@ -31,7 +32,8 @@ body:has(.csv-sql-page) #root {
   align-items: center;
   justify-content: center;
   padding: 24px 16px;
-  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
   transition: background 0.3s;
 }
 
@@ -57,6 +59,7 @@ body:has(.csv-sql-page) #root {
   justify-content: space-between;
   margin-bottom: 32px;
   gap: 16px;
+  
 }
 
 @media (max-width: 480px) {
@@ -72,7 +75,8 @@ body:has(.csv-sql-page) #root {
   padding: 11px 16px;
   border-radius: 10px;
   font-size: 14.5px;
-  font-family: 'DM Mono', monospace;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
   transition: border 0.2s, box-shadow 0.2s;
 }
 .csv-table-input:focus {
@@ -91,9 +95,12 @@ body:has(.csv-sql-page) #root {
   transition: all 0.22s;
   margin-bottom: 20px;
   cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;  
 }
 .csv-dropzone--has-file {
   cursor: default;
+  
 }
 .csv-dropzone:hover:not(.csv-dropzone--has-file) {
   opacity: 0.9;
@@ -109,6 +116,7 @@ body:has(.csv-sql-page) #root {
   gap: 8px;
   flex-shrink: 0;
   transition: opacity 0.2s;
+  font-family: "Poppins", sans-serif;
 }
 .csv-toggle:hover {
   opacity: 0.8;
@@ -127,8 +135,10 @@ body:has(.csv-sql-page) #root {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.05em;
   transition: background 0.18s, transform 0.18s;
+  font-family: "Poppins", sans-serif;
+
 }
 .csv-btn-primary:hover:not(:disabled) {
   transform: translateY(-1px);
@@ -150,6 +160,7 @@ body:has(.csv-sql-page) #root {
   font-weight: 500;
   cursor: pointer;
   transition: opacity 0.18s;
+  font-family: "Poppins", sans-serif;
 }
 .csv-btn-secondary:hover {
   opacity: 0.75;

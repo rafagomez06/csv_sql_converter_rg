@@ -23,7 +23,7 @@ const SuccessPanel = ({ tableName, sqlBlob, onDownload, onReset, colors }) => (
       <CheckIcon />
     </div>
 
-    <p style={{ margin: "0 0 4px", fontSize: 15, fontWeight: 600, color: colors.text }}>
+    <p style={{ margin: "0 0 4px", fontSize: 15, fontWeight: 800, color: colors.text }}>
       ¡Script generado exitosamente!
     </p>
     <p style={{ margin: "0 0 18px", fontSize: 13, color: colors.textMuted }}>
@@ -56,6 +56,7 @@ const SuccessPanel = ({ tableName, sqlBlob, onDownload, onReset, colors }) => (
         style={{
           border: `1.5px solid ${colors.border}`,
           color: colors.textMuted,
+          fontWeight:800
         }}
       >
         Nueva conversión
