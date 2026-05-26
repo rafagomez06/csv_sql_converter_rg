@@ -57,14 +57,14 @@ const DropZone = ({
           <div style={{ color: dragging ? colors.accent : colors.textMuted, marginBottom: 10 }}>
             <UploadIcon />
           </div>
-          <p style={{ margin: "0 0 4px", fontSize: 14.5, fontWeight: 500, color: colors.text }}>
+          <p style={{ margin: "0 0 4px", fontSize: 14.5, fontWeight: 800, color: colors.text }}>
             {dragging ? "Suelta el archivo aquí" : "Suelta tu archivo .csv aquí"}
           </p>
           <p style={{ margin: "0 0 14px", fontSize: 13, color: colors.textMuted }}>
             o haz clic para explorar tus archivos locales
           </p>
           <span style={{
-            display: "inline-block", fontSize: 12, fontWeight: 500,
+            display: "inline-block", fontSize: 12, fontWeight: 800,
             border: `1px solid ${colors.border}`, borderRadius: 20,
             padding: "5px 16px", color: colors.textMuted,
             background: colors.surface,
